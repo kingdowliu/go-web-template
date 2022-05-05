@@ -8,6 +8,6 @@ import "gorm.io/gorm"
 //
 type User struct {
 	gorm.Model
-	UserName string `json:"username" gorm:"comment:用户名"`
-	PassWord string `json:"password" gorm:"密码"`
+	UserName string `gorm:"column:username"`
+	PassWord string `gorm:"column:password"`
 }
